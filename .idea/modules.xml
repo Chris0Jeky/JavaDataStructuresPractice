@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/HashMapProblemEasy/HashMapProblemEasy.iml" filepath="$PROJECT_DIR$/HashMapProblemEasy/HashMapProblemEasy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaDataStructuresPractice.iml" filepath="$PROJECT_DIR$/JavaDataStructuresPractice.iml" />
+    </modules>
+  </component>
+</project>
