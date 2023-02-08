@@ -78,41 +78,55 @@ public class BinaryTree {
     }
 
     public void deleteNode(int data){
+        //deleting node from the binary search tree
         root = deleteNodeRecursive(root, data);
     }
 
     private Node deleteNodeRecursive(Node current, int data){
+        //check if current node is null, return null
         if (current == null){
             return null;
         }
+        //check if current node has the data to be deleted
         if (data == current.data){
+            //current node has no child
             if (current.left == null && current.right == null){
                 return null;
             }
+            //current node has only left child
             if (current.right == null){
                 return current.left;
             }
+            //current node has only right child
             if (current.left == null){
                 return current.right;
             }
-
+            //current node has both left and right child
+            //find the smallest value in the right subtree
             int smallestValue = findSmallestValue(current.right);
+            //replace current node data with the smallest value
             current.data = smallestValue;
+            //delete the node with the smallest value in the right subtree
             current.right = deleteNodeRecursive(current.right, smallestValue);
+            //return the current node after deleting the smallest value node
             return current;
         }
-
+        //recursively delete node in the left subtree if data is less than current node data
         if (data < current.data) {
             current.left = deleteNodeRecursive(current.left, data);
             return current;
         }
+        //recursively delete node in the right subtree if data is greater than current node data
         current.right = deleteNodeRecursive(current.right, data);
         return current;
     }
 
     private int findSmallestValue(Node root) {
+        //return root data if left child is null
+        //otherwise find the smallest value in the left subtree
         return root.left == null ? root.data : findSmallestValue(root.left);
     }
+
 
 
 }
