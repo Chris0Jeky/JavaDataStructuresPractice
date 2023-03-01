@@ -19,7 +19,7 @@ public class Main {
 
     }
 
-    public static int solutionHashMap(Integer[] ar, int k) {
+    public static void solutionHashMap(Integer[] ar, int k) {
         HashMap<Integer, Integer> broom = new HashMap<>();
         int counter = 0;
         for(int i = 0; i < ar.length; i++){
@@ -44,7 +44,6 @@ public class Main {
         }
         System.out.println(counter);
         System.out.println(broom.toString());
-        return counter;
     }
 
     public static int solutionQuadratic(Integer[] ar, int k){
